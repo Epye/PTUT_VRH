@@ -5,9 +5,8 @@ using UnityEngine;
 public class VRInteractiveItem : MonoBehaviour {
 
 
-    private float x;
-    private float y;
-    private Vector3 rotateValue;
+
+
 
 
 	// Use this for initialization
@@ -17,9 +16,6 @@ public class VRInteractiveItem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        y = Input.GetAxis("Oculus_GearVR_DpadX");
-        Debug.Log(x + ":" + y);
-        rotateValue = new Vector3(x, y * -1, 0);
-        transform.eulerAngles = transform.eulerAngles - rotateValue;
+        
 	}
 }

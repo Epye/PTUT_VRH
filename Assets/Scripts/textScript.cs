@@ -4,29 +4,17 @@ using UnityEngine;
 
 public class textScript : MonoBehaviour
 {
-    private string url = "https://opentdb.com/api.php?amount=10";
-    // Use this for initialization
-    IEnumerator Start()
-    {
-        using (WWW www = new WWW(url))
-        {
-            yield return www;
-            string text = www.text;
-            string[] values = text.Split('"');
-            foreach (string value in values)
-            {
-                var theText = new GameObject();
-                var textMesh = theText.AddComponent<TextMesh>();
-                var meshRenderer = theText.AddComponent<MeshRenderer>();
-                textMesh.text = value;
-                theText.transform.position = new Vector3(Random.Range(-50, 50), Random.Range(-50, 50), Random.Range(-50, 50));
-            }
-        }
-    }
+    private float x;
+    private float y;
+    private Vector3 rotateValue;
+    GameObject obj;
 
     // Update is called once per frame
     void Update()
-    {
-
+    {  
+        if(Input.GetAxis("Swipe")<0){
+            rotateValue = new Vector3(5, 5, 5);
+            obj.transform.Rotate(rotateValue);
+        }
     }
 }
