@@ -17,7 +17,7 @@ public class InitializeSearchSkills : MonoBehaviour {
         foreach (string skill in skills)
         {
             GameObject item = Instantiate(toggle);
-            item.transform.parent = content.transform;
+            item.transform.SetParent(content.transform);
 
             item.transform.localRotation = toggle.transform.localRotation;
             item.transform.localScale = toggle.transform.localScale;

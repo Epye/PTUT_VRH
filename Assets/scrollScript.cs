@@ -14,7 +14,6 @@ public class scrollScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OVRInput.Controller activeController = OVRInput.GetActiveController();
         if (OVRInput.Get(OVRInput.Touch.One))
         {
             Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);

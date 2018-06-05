@@ -16,7 +16,7 @@ public class InitializeSearchLocations : MonoBehaviour {
         foreach (string location in locations)
         {
             GameObject item = Instantiate(toggle);
-            item.transform.parent = content.transform;
+            item.transform.SetParent(content.transform);
 
 
             item.transform.localRotation = toggle.transform.localRotation;
