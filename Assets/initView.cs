@@ -8,8 +8,8 @@ using System;
 public class initView : MonoBehaviour {
 
 	// Use this for initialization
-    //private string url = "http://192.168.43.113:3000/users";
-    private string url = "http://localhost:3000/users";
+    private string url = "http://192.168.43.113:3000/users";
+    //private string url = "http://localhost:3000/users";
     public GameObject content;
     public GameObject profileCard;
     // Use this for initialization
