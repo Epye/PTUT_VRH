@@ -25,7 +25,7 @@ public class initView : MonoBehaviour {
                 GameObject item = Instantiate(profileCard);
                 item.transform.SetParent(content.transform);
 
-                item.name = profil["name"].ToString() + " " + profil["surname"].ToString();
+                item.name = profil["id"].ToString();
 
                 GameObject surname = item.transform.Find("Profile Panel/Name").gameObject;
                 var labelTextName = surname.GetComponent<Text>();

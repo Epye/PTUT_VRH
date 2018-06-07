@@ -11,8 +11,6 @@ public class ToggleChanged : MonoBehaviour {
     public GameObject contentLocation;
     public GameObject contentScrollView;
     public GameObject profileCard;
-    public TextMesh textMesh;
-    int tmp = 0;
     bool isEmpty;
 
     string url = "http://192.168.43.113:3000/users/filter?";
@@ -81,7 +79,7 @@ public class ToggleChanged : MonoBehaviour {
                 GameObject item = Instantiate(profileCard);
                 item.transform.SetParent(contentScrollView.transform);
 
-                item.name = profil["name"].ToString() + " " + profil["surname"].ToString();
+                item.name = profil["id"].ToString();
 
                 GameObject surname = item.transform.Find("Profile Panel/Name").gameObject;
                 var labelTextName = surname.GetComponent<Text>();
@@ -135,7 +133,7 @@ public class ToggleChanged : MonoBehaviour {
             url = "http://192.168.43.113:3000/users/filter?";
             if (www.isNetworkError || www.isHttpError)
             {
-                textMesh.text = "Code : " + www.responseCode.ToString() + " " + www.error.ToString();
+                Debug.LogError(www.error.ToString());
             }
             else
             {
@@ -151,7 +149,7 @@ public class ToggleChanged : MonoBehaviour {
                     GameObject item = Instantiate(profileCard);
                     item.transform.SetParent(contentScrollView.transform);
 
-                    item.name = profil["name"].ToString() + " " + profil["surname"].ToString();
+                    item.name = profil["id"].ToString();
 
                     GameObject surname = item.transform.Find("Profile Panel/Name").gameObject;
                     var labelTextName = surname.GetComponent<Text>();

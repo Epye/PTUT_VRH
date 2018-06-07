@@ -7,6 +7,7 @@ public class OVRControllerExplodedProfile : MonoBehaviour {
     public GameObject ProfileExploded;
     public GameObject camera;
     private Vector3 origin;
+    bool state = false;
 
     // Use this for initialization
     void Start () {
@@ -16,15 +17,11 @@ public class OVRControllerExplodedProfile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {    
         OVRInput.Controller activeController = OVRInput.GetActiveController();
-        if (OVRInput.Get(OVRInput.Button.Two))
-        {
-            contacts.SetActive(false);
-            ProfileExploded.SetActive(true);
-        }
+        state = !state;
         if (OVRInput.Get(OVRInput.Button.One))
         {
-            contacts.SetActive(true);
-            ProfileExploded.SetActive(false);
+            contacts.SetActive(state);
+            ProfileExploded.SetActive(!state);
         }
         if (OVRInput.Get(OVRInput.Touch.One))
         {

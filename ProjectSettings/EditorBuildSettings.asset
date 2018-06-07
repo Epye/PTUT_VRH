@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Oculus/VR/Scenes/UI.unity
     guid: 1f4d3ae64a10d434db219de8b14348e1
   - enabled: 1
-    path: Assets/Scenes/Profile_exploded.unity
+    path: Assets/Scenes/Scene Finale.unity
+    guid: 940137c42a6554db8a24cc50c86e034a
+  - enabled: 1
+    path: Assets/Scenes/Scene_Profile.unity
     guid: 98baddcf8553c554cbf40e70aa9d12f8
   m_configObjects: {}
